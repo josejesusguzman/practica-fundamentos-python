@@ -1,35 +1,37 @@
-# Imprimir tu nombre
-nombre = input("Introduce tu nombre: ")
-print(f"Hola {nombre}")
-print("Hola, {}".format(nombre))
+def validacionEdad() :
+    # Imprimir tu nombre
+    nombre = input("Introduce tu nombre: ")
+    # Concatenación - Poner una variable junto con un texto plano
+    print(f"Hola {nombre}")
+    print("Hola {}".format(nombre))
+    print("Hola " + nombre)
 
-# entero
-edad = 25
-# flotante - decimales
-altura = 1.75
-#convertir flotante 
-edadString = str(edad)
-boolleanos = False
+    # entero
+    edad = input("Ahora introduce tu edad: ")
+    # flotante - decimales
+    estatura = 1.75
+    #convertir flotante 
+    edadString = str(edad) # Palabra que contiene el 2 y el 5 (25)
+    booleanos = False # True
 
-print(edad + edad)
-print(edadString + edadString)
+    print(type(edad))
+    print(type(edadString))
 
-print(type(edad))
+    #Transformar string o palabra a entero
+    edad = int(edad)
 
-tuEdad = input("Introduce tu edad: ")
-tuEdad = int(tuEdad)
+    # Estructura de control IF
+    if edad >= 18 and edad < 100 : # Si edad es mayor o igual a 18 y menor a 100
+        print("Hola {} pasale por tu Tonayán".format(nombre))
+    elif edad >= 100 : # Si no, entonces ¿Edad es mayor o igual a 100?
+        print("¿Acaso eres Chabelo?")
+    elif edad <= 0 : # Si no, entonces ¿Edad es menor o igual a 0;
+        print("No existes")
+    else : # Si no - Si no se cumple ninguna de las anteriores
+        print("Tas bebe") 
 
-# Estructura de control IF
-if tuEdad >= 18 and tuEdad < 100:
-    print("Eres mayor de edad")
-elif tuEdad >= 100:
-    print("¿Eres inmortal?")
-elif tuEdad <= 0:
-    print("No existes")
-else:
-    print("Eres menor de edad")
+
 
 # Estructura de control FOR
-for i in range(0, 10):
-    print(i)
-
+while True :
+    validacionEdad()
